@@ -1,0 +1,15 @@
+[package]
+name = "ebpf"
+version = "0.1.0"
+edition = "2024"
+
+[profile.dev]
+# Disabling stack unwinding. This disables the generation of unwinding symbol information and thus
+# considerably reduces binary size.
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[dependencies]
+aya-ebpf = { workspace = true }

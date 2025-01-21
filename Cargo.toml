@@ -1,0 +1,7 @@
+[workspace]
+resolver = "3"
+members = ["xdp-starter/ebpf"]
+
+[workspace.dependencies]
+aya-ebpf = "0.1.1"
+aya = "0.13.1"
