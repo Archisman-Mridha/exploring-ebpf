@@ -35,13 +35,14 @@
       {
         devShells.default = mkShell {
 					nativeBuildInputs = [
-						rust-bin.nightly.latest.default
+						(rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
 					];
 
           buildInputs = [
             llvm
             rustup
-						rust-bin.nightly.latest.default
+
+						(rust-bin.fromRustupToolchainFile ./rust-toolchain.toml)
 
             bpf-linker
           ];

@@ -1,11 +1,11 @@
-#![allow(non_snake_case)]
 #![no_std]
 #![no_main]
+#![allow(non_snake_case)]
 
 use aya_ebpf::{bindings::xdp_action, macros::xdp, programs::XdpContext};
 
 #[xdp]
-fn xdpHandler(_ctx: XdpContext) -> u32 {
+pub fn xdpHandler(_ctx: XdpContext) -> u32 {
   xdp_action::XDP_PASS
 }
 

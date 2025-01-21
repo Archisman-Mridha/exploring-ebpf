@@ -1,0 +1,14 @@
+[package]
+name = "xdp-starter-kernelspace"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "xdp-starter-kernelspace-component"
+path = "src/main.rs"
+
+[build-dependencies]
+which = { workspace = true }
+
+[dependencies]
+aya-ebpf = { workspace = true }

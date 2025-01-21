@@ -1,7 +1,20 @@
 [workspace]
-resolver = "3"
-members = ["xdp-starter/ebpf"]
+resolver = "2"
+members = ["xdp-starter/userspace", "xdp-starter/kernelspace"]
+default-members = ["xdp-starter/userspace"]
 
 [workspace.dependencies]
-aya-ebpf = "0.1.1"
-aya = "0.13.1"
+aya-ebpf = { version = "0.1.1", default-features = false }
+aya = { version = "0.13.1", default-features = false }
+aya-build = { version = "0.1.2", default-features = false }
+anyhow = { version = "1.0.95", default-features = false }
+which = { version = "7.0.1", default-features = false }
+
+[profile.release.package.xdp-starter-kernelspace]
+debug = 2
+#
+# Controls the maximum number of code generation units the crate is split into.
+# When a crate is split into multiple codegen units, LLVM is able to process them in parallel.
+# Increasing parallelism may speed up compile times, but may also produce slower code. Setting this
+# to 1 may improve the performance of generated code, but may be slower to compile.
+codegen-units = 1

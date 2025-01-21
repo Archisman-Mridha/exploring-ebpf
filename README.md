@@ -1,5 +1,14 @@
 # eBPF exercises
 
+## TODOs
+
+- [ ] Study about [cargo metadata](https://doc.rust-lang.org/cargo/commands/cargo-metadata.html)
+
+## GOTCHAs
+
+- A kernelspace component package is built using its corresponding userspace component package, with the help of `aya-build`.
+  For example, the code in xdp-starter-userspace's [build.rs](./xdp-starter/build.rs) is responsible for building the corresponding kernelspace component (xdp-starter-kernelspace).
+
 ## Developer guide
 
 Make sure you meet the requirements specified in the [Aya book](https://aya-rs.dev/book/start/development/).
@@ -17,4 +26,12 @@ If you have [direnv](https://direnv.net) installed, then the nix shell will auto
 
 - [Rustup terminology](https://rust-lang.github.io/rustup/concepts/index.html)
 
-- [rust overlay](https://github.com/oxalica/rust-overlay?tab=readme-ov-file)
+- [Rustc codegen options](https://doc.rust-lang.org/rustc/codegen-options/index.html)
+
+- [The rust toolchain file](https://rust-lang.github.io/rustup/overrides.html#the-toolchain-file)
+
+- [Rust overlay for Nix](https://github.com/oxalica/rust-overlay?tab=readme-ov-file)
+
+- [The aya book](https://aya-rs.dev/book/)
+
+- [aya examples](https://github.com/vadorovsky/aya-examples)
