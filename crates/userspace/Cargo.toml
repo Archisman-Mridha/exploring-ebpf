@@ -1,0 +1,33 @@
+[package]
+name = "userspace"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "arccni-daemon"
+path = "src/daemon/main.rs"
+
+[[bin]]
+name = "bridge-cni-plugin"
+path = "src/plugins/bridge/main.rs"
+
+[[bin]]
+name = "ipam-host-local-cni-plugin"
+path = "src/plugins/ipam/host-local/main.rs"
+
+[[bin]]
+name = "loopback-cni-plugin"
+path = "src/plugins/loopback/main.rs"
+
+[build-dependencies]
+anyhow = { workspace = true }
+aya-build = { workspace = true }
+
+[dependencies]
+envy = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+strum = { workspace = true }

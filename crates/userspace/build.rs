@@ -1,7 +1,7 @@
 #![allow(non_snake_case)]
 
 use {
-  anyhow::{Context as _, anyhow},
+  anyhow::{anyhow, Context as _},
   aya_build::cargo_metadata,
 };
 
@@ -18,8 +18,8 @@ fn main() -> anyhow::Result<()> {
 
   let ebpfComponentPackage = packages
     .into_iter()
-    .find(|cargo_metadata::Package { name, .. }| name == "xdp-starter-kernelspace")
-    .ok_or_else(|| anyhow!("xdp-starter-kernelspace package not found"))?;
+    .find(|cargo_metadata::Package { name, .. }| name == "kernelspace")
+    .ok_or_else(|| anyhow!("kernelspace package not found"))?;
 
   aya_build::build_ebpf([ebpfComponentPackage])
 }
