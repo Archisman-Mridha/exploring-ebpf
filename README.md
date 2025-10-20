@@ -4,6 +4,10 @@
 
 - [ ] Study about [cargo metadata](https://doc.rust-lang.org/cargo/commands/cargo-metadata.html)
 
+- [ ] Properly explain, why we need VLAN / VXLAN (stateless) to establish a single virtual Layer 2 network across multiple physical LANs connected via a layer 3 switch.
+
+- [ ] Understand how an MPSC channel works. Maybe, build one yourself 😉.
+
 ## GOTCHAs
 
 - A kernelspace component package is built using its corresponding userspace component package, with the help of `aya-build`.
@@ -48,6 +52,14 @@
 
 - [vxlan-docker-hands-on](https://github.com/faysalmehedi/vxlan-docker-hands-on)
   > Hands-on: Multi-node container / Overlay communication using linux vxlan feature.
+
+- [Difference between layer-2 and layer-3 switches](https://www.geeksforgeeks.org/difference-between-layer-2-and-layer-3-switches/)
+
+- [rtnetlink(7) — Linux manual page](https://man7.org/linux/man-pages/man7/rtnetlink.7.html)
+
+- [Virtual eXtensible Local Area Networking documentation](https://docs.kernel.org/networking/vxlan.html)
+
+- [Creating a Simple VXLAN Overlay Network using Linux Network Namespaces and Bridges](https://medium.com/@mdshofiur/creating-a-simple-vxlan-overlay-network-using-linux-network-namespaces-and-bridges-7116039b4882)
 
 **CNI implementations** :
 
